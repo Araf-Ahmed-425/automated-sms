@@ -2,21 +2,21 @@ from twilio.rest import Client
 import random
 
 # =======================================================
-#  TWILIO ACCOUNT 1 (For Angkon)
+#  TWILIO ACCOUNT 1 (For x)
 # =======================================================
-TWILIO1_SID = "AC0a607254a76f80f7a47039f6b571fca2"
-TWILIO1_AUTH = "fc43abd3d86876e1c3c33612ee047796"
-TWILIO1_FROM = "+16303497544"
-TWILIO1_TO = "+8801925987071"   # Angkon's number
+TWILIO1_SID = "xxxxxxx"
+TWILIO1_AUTH = "xxxxxxx"
+TWILIO1_FROM = "+xxxxxxx"
+TWILIO1_TO = "+xxxxxxx"
 
 
 # =======================================================
-#  TWILIO ACCOUNT 2 (For Rafi)
+#  TWILIO ACCOUNT 2 (For y)
 # =======================================================
-TWILIO2_SID = "AC21867950d82cd96e137175beadd6fe74"
-TWILIO2_AUTH = "55624fc8e79bb285d87f30f742ba81c9"
-TWILIO2_FROM = "+19522420521"
-TWILIO2_TO = "+8801912563397"  # Rafi's number
+TWILIO2_SID = "xxxxxxx"
+TWILIO2_AUTH = "xxxxxxx"
+TWILIO2_FROM = "+xxxxxxx"
+TWILIO2_TO = "+xxxxxxx"
 
 
 
@@ -87,14 +87,14 @@ def send_twilio_2(message):
 # MENU & EXECUTION
 # =======================================================
 print("Where do you want to send SMS?")
-print("1. Angkon (Twilio Account #1)")
-print("2. Rafi   (Twilio Account #2)")
+print("1. x (Twilio Account #1)")
+print("2. y   (Twilio Account #2)")
 
 choice = input("Enter 1 or 2: ")
 
 msg1 = build_message(
-    name="Angkon",
-    programme="Versity-A Admission Programme",
+    name="x",
+    programme="VAP-Ka",
     subject="M",
     week="09",
     written_get=2.5,
@@ -105,7 +105,7 @@ msg1 = build_message(
 )
 
 msg2 = build_message(
-    name="Rafi",
+    name="y",
     programme="EAP",
     subject="C",
     week="09",
@@ -117,14 +117,14 @@ msg2 = build_message(
 )
 
 if choice == "1":
-    print("\nGenerated Message for Angkon:")
+    print("\nGenerated Message for x:")
     print(msg1)
     print("\nSending...")
     send_twilio_1(msg1)
 
 elif choice == "2":
-    print("\nGenerated Message for Rafi:")
-    print(msg2)   # FIXED!
+    print("\nGenerated Message for y:")
+    print(msg2)
     print("\nSending...")
     send_twilio_2(msg2)
 
